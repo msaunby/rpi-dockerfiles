@@ -12,7 +12,7 @@ jobs:
       - name: Setup buildx for cross platform build
         uses: docker/setup-buildx-action@v2
       - name: Generate the artifacts
-        run: docker buildx build --platform linux/arm/v7 motion --file motion/Dockerfile -t msaunby/pi-motion-test:latest -o - . > pi-motion-test.tar
+        run: docker buildx build --platform linux/arm/v7 motion --file motion/Dockerfile -t msaunby/pi-motion-test:latest -o - > pi-motion-test.tar
       - name: Upload the artifacts
         uses: skx/github-action-publish-binaries@master
         env:
