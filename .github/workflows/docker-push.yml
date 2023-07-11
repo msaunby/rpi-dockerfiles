@@ -31,9 +31,9 @@ jobs:
 
       - name: Confirm tag name
         run: echo "Tag name ${{ github.ref_name }}"
-      -
-        name: Build the open-cv Docker image
-        run: docker buildx build --platform linux/arm/v7 open-cv --file open-cv/Dockerfile --tag ghcr.io/msaunby/pi-opencv-test:latest --push
+      # -
+      #   name: Build the open-cv Docker image
+      #   run: docker buildx build --platform linux/arm/v7 open-cv --file open-cv/Dockerfile --tag ghcr.io/msaunby/pi-opencv-test:latest --push
       -
         name: Build the motion Docker image
         run: docker buildx build --platform linux/arm/v7 motion --file motion/Dockerfile --tag ghcr.io/msaunby/pi-motion-test:latest --push
