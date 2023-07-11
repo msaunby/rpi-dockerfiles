@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@master
+      - name: Setup buildx for cross platform build
+        uses: docker/setup-buildx-action@v2
       - name: Generate the artifacts
-        run: touch 'dummy.txt'
+        run: docker buildx build --platform linux/arm/v7 -t msaunby/pi-motion-test:latest -o - . > pi-motion-test.tar
       - name: Upload the artifacts
         uses: skx/github-action-publish-binaries@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: 'dummy.txt'
+          args: 'pi-motion-test.tar'
