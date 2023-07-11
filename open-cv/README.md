@@ -1,10 +1,14 @@
 
 Install docker on Raspberry Pi
 
+<https://github.com/msaunby/rpi-dockerfiles/pkgs/container/pi-opencv-test>
+
 Pull the image
 ```
-$ docker pull msaunby/pi-opencv-test:latest
+$ docker pull ghcr.io/msaunby/pi-opencv-test:latest
 ```
+
+Or if DockerHub used ```docker pull msaunby/pi-opencv-test:latest```
 
 Run in container
 ```
