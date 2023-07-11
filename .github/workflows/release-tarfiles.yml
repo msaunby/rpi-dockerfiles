@@ -10,7 +10,6 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@master
       - name: Generate the artifacts
-        uses: skx/github-action-build@master
         run: touch 'dummy.txt'
       - name: Upload the artifacts
         uses: skx/github-action-publish-binaries@master
