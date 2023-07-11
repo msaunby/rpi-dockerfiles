@@ -1,12 +1,16 @@
+# Setup instructions for dockerised OpenCV for RPi
 
 Install docker on Raspberry Pi
 
-<https://github.com/msaunby/rpi-dockerfiles/pkgs/container/pi-opencv-test>
+<https://docs.docker.com/engine/install/raspbian/>
+
 
 Pull the image
 ```
 $ docker pull ghcr.io/msaunby/pi-opencv-test:latest
 ```
+
+Uses GitHub registry <https://github.com/msaunby/rpi-dockerfiles/pkgs/container/pi-opencv-test>
 
 Or if DockerHub used ```docker pull msaunby/pi-opencv-test:latest```
 
